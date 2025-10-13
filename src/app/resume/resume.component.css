@@ -3,14 +3,14 @@
   font-weight: 500;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #65C7F7;
-  font-family: "Poppins", sans-serif;
+  color: #65c7f7;
+  font-family: 'Poppins', sans-serif;
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #4364F7;
+  border-left: 2px solid #4364f7;
   position: relative;
 }
 
@@ -18,18 +18,18 @@
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
-  color: #9CECFB;
+  color: #9cecfb;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #673AB7;
+  background: #673ab7;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 400;
   margin-bottom: 10px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .resume .resume-item ul {
@@ -45,7 +45,7 @@
 }
 
 .resume .resume-item::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
