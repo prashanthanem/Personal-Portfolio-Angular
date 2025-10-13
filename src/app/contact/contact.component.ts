@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   imports: [FormsModule],
-  selector: 'contact',
+  selector: 'app-contact',
   templateUrl: './contact.component.html'
 })
 export class ContactComponent {
@@ -32,6 +32,7 @@ export class ContactComponent {
         this.submitted = true;
         this.form.reset();
         this.loading = false;
+        console.log(result.text);
       }, (error) => {
         console.log(error.text);
       });
