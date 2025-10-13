@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   imports: [FormsModule],
   selector: 'app-contact',
-  templateUrl: './contact.component.html'
+  templateUrl: './contact.component.html',
 })
 export class ContactComponent {
   @ViewChild('contactForm') form: any;
@@ -23,18 +23,20 @@ export class ContactComponent {
 
   public sendEmail() {
     const template_params = {
-      'from_name': this.contactModel.name,
-      'from_email': this.contactModel.email,
-      'message': this.contactModel.message
+      from_name: this.contactModel.name,
+      from_email: this.contactModel.email,
+      message: this.contactModel.message,
     };
-    emailjs.send('service_w6c0nmt', 'template_qjdc26i', template_params, 'yffB3k72wE-CDiycd')
-      .then((result: EmailJSResponseStatus) => {
+    emailjs.send('service_w6c0nmt', 'template_qjdc26i', template_params, 'yffB3k72wE-CDiycd').then(
+      (result: EmailJSResponseStatus) => {
         this.submitted = true;
         this.form.reset();
         this.loading = false;
         console.log(result.text);
-      }, (error) => {
+      },
+      error => {
         console.log(error.text);
-      });
+      },
+    );
   }
 }
