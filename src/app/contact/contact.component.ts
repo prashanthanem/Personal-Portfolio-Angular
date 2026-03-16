@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Contact } from './contact';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 //import { FooterComponent } from '../footer/footer.component';
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
-  @ViewChild('contactForm') form: any;
+  @ViewChild('contactForm') form!: NgForm;
 
   contactModel = new Contact('', '', '');
   submitted = false;
