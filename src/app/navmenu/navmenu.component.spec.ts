@@ -8,7 +8,7 @@ describe('NavmenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NavmenuComponent],
+      imports: [NavmenuComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NavmenuComponent);
