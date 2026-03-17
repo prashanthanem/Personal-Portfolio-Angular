@@ -22,6 +22,8 @@
     "@angular/forms": "^21.2.4",
     "@angular/platform-browser": "^21.2.4",
     "@angular/platform-browser-dynamic": "^21.2.4",
+    "@angular/pwa": "^21.2.2",
+    "@angular/service-worker": "^21.2.4",
     "@emailjs/browser": "^3.12.1",
     "bootstrap": "^5.3.2",
     "rxjs": "~7.8.0",
