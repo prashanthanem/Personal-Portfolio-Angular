@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavmenuComponent } from './navmenu/navmenu.component';
-import { RouterOutlet } from '@angular/router';
+import { CarouselComponent } from './carousel/carousel.component';
 import { IntroArticleComponent } from './intro-article/intro-article.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ResumeComponent } from './resume/resume.component';
@@ -10,7 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 @Component({
   imports: [
     NavmenuComponent,
-    RouterOutlet,
+    CarouselComponent,
     IntroArticleComponent,
     SkillsComponent,
     ResumeComponent,
