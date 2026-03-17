@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NavmenuComponent } from './navmenu/navmenu.component';
-import { RouterOutlet } from '@angular/router';
+import { HeroComponent } from './hero/hero.component';
 import { IntroArticleComponent } from './intro-article/intro-article.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ResumeComponent } from './resume/resume.component';
@@ -10,7 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 @Component({
   imports: [
     NavmenuComponent,
-    RouterOutlet,
+    HeroComponent,
     IntroArticleComponent,
     SkillsComponent,
     ResumeComponent,
@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   title = 'portfolio';

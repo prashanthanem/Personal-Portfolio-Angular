@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Contact } from './contact';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-//import { FooterComponent } from '../footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../../environments/environment';
 
 @Component({
   imports: [FormsModule],
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
-  @ViewChild('contactForm') form: any;
+  @ViewChild('contactForm') form!: NgForm;
 
   contactModel = new Contact('', '', '');
   submitted = false;
@@ -27,16 +28,23 @@ export class ContactComponent {
       from_email: this.contactModel.email,
       message: this.contactModel.message,
     };
-    emailjs.send('service_w6c0nmt', 'template_qjdc26i', template_params, 'yffB3k72wE-CDiycd').then(
-      (result: EmailJSResponseStatus) => {
-        this.submitted = true;
-        this.form.reset();
-        this.loading = false;
-        console.log(result.text);
-      },
-      error => {
-        console.log(error.text);
-      },
-    );
+    emailjs
+      .send(
+        environment.emailjsServiceId,
+        environment.emailjsTemplateId,
+        template_params,
+        environment.emailjsPublicKey,
+      )
+      .then(
+        (result: EmailJSResponseStatus) => {
+          this.submitted = true;
+          this.form.reset();
+          this.loading = false;
+          console.log(result.text);
+        },
+        error => {
+          console.log(error.text);
+        },
+      );
   }
 }
