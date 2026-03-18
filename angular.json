@@ -24,14 +24,11 @@
             "assets": [
               "src/favicon.ico",
               "src/icon.ico",
-              "src/assets"
+              "src/assets",
+              "public"
             ],
-            "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
-            ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ],
+            "styles": [],
+            "scripts": [],
             "browser": "src/main.ts"
           },
           "configurations": {
@@ -48,7 +45,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
